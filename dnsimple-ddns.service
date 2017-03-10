@@ -1,0 +1,12 @@
+[Unit]
+Description=ddns updater for DNSimple
+
+[Service]
+ExecStart=/opt/ddns/ddns.sh
+Type=simple
+User=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

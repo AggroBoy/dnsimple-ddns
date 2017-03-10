@@ -1,0 +1,4 @@
+TOKEN="oauth-v2-token-text"
+ACCOUNT_ID="some-id"
+ZONE_ID="a.domain.com"
+RECORD_ID="some-id"
