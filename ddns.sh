@@ -1,8 +1,17 @@
 #!/bin/zsh
 
 # Read config
+if [[ -f /etc/ddnsrc ]]; then
 . /etc/ddnsrc
+fi
+if [[ -f /$HOME/.ddnsrc ]]; then
+. /$HOME/.ddnsrc
+fi
 
+if [[ ! -v TOKEN ]]; then
+    logger -s -t "ddns" "DDNS: Cannot run ddns; no config found."
+    exit 1
+fi
 
 while true; do
     IP=$(curl -s http://myip.shadowrealm.org)
