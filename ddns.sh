@@ -8,7 +8,7 @@ while true; do
     IP=`curl -s http://myip.shadowrealm.org`
 
     if [[ "$?" = "0" && "$OLDIP" != "$IP" && "$IP" != "" && "$IP" ]]; then
-        echo New public IP address detected: $IP
+        logger -s -t "ddns" "DDNS: New public IP address detected: $IP"
 
         curl -H "Authorization: Bearer $TOKEN" \
             -H "Content-Type: application/json" \
