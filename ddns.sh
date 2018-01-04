@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Read config
 . /etc/ddnsrc
