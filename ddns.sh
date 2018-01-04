@@ -5,7 +5,7 @@
 
 
 while true; do
-    IP=`curl -s http://myip.shadowrealm.org`
+    IP=$(curl -s http://myip.shadowrealm.org)
 
     if [[ "$?" = "0" && "$OLDIP" != "$IP" && "$IP" != "" && "$IP" ]]; then
         logger -s -t "ddns" "DDNS: New public IP address detected: $IP"
