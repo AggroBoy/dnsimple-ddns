@@ -4,12 +4,12 @@
 Note that the install script assumes your servers look a lot like mine, and
 could easily cause damage if used carelessly.  You probably shouldn't use it
 unless you're very sure it meets your needs. It's only a convenience anyway;
-just put the script in /opt/ddns, create /etc/ddnsrc with the correct
+just put the script in /opt/ddns, create /etc/ddnsrc (or ~/.ddnsrc) with the correct
 values, install the .service and go!
 
 ## Config
 
-There are four parameters that need to be set in /etc/ddnsrc:
+There are four parameters that need to be set in /etc/ddnsrc (or ~/.ddnsrc):
 
 * **`TOKEN`** : The oauth2 access token for your dnsimple account; this can
     (must) be created on the dnsimple website.
